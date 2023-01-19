@@ -191,7 +191,7 @@ Widget myDivider() => Padding(
       ),
     );
 
-Widget buildArticalItem(article) => Padding(
+Widget buildArticalItem(article, context) => Padding(
       padding: const EdgeInsets.all(20.0),
       child: Row(
         children: [
@@ -222,8 +222,7 @@ Widget buildArticalItem(article) => Padding(
                     child: Text(
                       'Title',
                       //'${article['title']}'
-                      style: TextStyle(
-                          fontSize: 18.0, fontWeight: FontWeight.w600),
+                      style: Theme.of(context).textTheme.bodyText1,
                       maxLines: 3,
                       overflow: TextOverflow.ellipsis,
                     ),
@@ -241,13 +240,13 @@ Widget buildArticalItem(article) => Padding(
       ),
     );
 
-Widget articleBuilder(list) => ConditionalBuilder(
+Widget articleBuilder(list, context) => ConditionalBuilder(
       condition: list.length > 0,
       builder: (context) => ListView.separated(
         physics:
             BouncingScrollPhysics(), // To remove the color from the top when we drag the screen to the down
-        itemBuilder: (context, index) => buildArticalItem(
-            list), //NewsCubit.get(context).business[index] // to get the data from api but its not working
+        itemBuilder: (context, index) => buildArticalItem(list[index],
+            context), //NewsCubit.get(context).business[index] // to get the data from api but its not working
         separatorBuilder: (context, index) => myDivider(),
         itemCount: 10,
       ),

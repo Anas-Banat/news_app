@@ -26,7 +26,7 @@ class BusinessScreen extends StatelessWidget {
         //   ),
         //   fallback: (context) => Center(child: CircularProgressIndicator()),
         // );
-        return articleBuilder(list);
+        return articleBuilder(list, context);
       },
     );
   }
