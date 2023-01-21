@@ -25,9 +25,7 @@ class NewsLayout extends StatelessWidget {
                 ),
                 IconButton(
                   icon: Icon(Icons.brightness_4_outlined),
-                  onPressed: () {
-                    NewsCubit.get(context).changeAppMode();
-                  },
+                  onPressed: () {},
                 ),
               ],
             ),
