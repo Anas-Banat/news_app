@@ -30,11 +30,21 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => NewsCubit()
-        ..changeAppMode(
-          formShared: isDark,
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => NewsCubit()
+            ..getBusiness()
+            ..getSports()
+            ..getScience(),
         ),
+        BlocProvider(
+          create: (context) => NewsCubit()
+            ..changeAppMode(
+              formShared: isDark,
+            ),
+        ),
+      ],
       child: BlocConsumer<NewsCubit, NewsStates>(
         listener: (context, state) {},
         builder: (context, state) {
