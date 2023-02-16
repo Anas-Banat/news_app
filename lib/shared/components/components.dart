@@ -1,7 +1,7 @@
 import 'package:conditional_builder/conditional_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:todo_app/layout/news_app/cubit/states.dart';
-import 'package:todo_app/modules/web_view/web_view_screen.dart';
+import 'package:todo_app/modules/news_app/web_view/web_view_screen.dart';
 import 'package:todo_app/shared/cubit/cubit.dart';
 
 Widget defaultButton({
