@@ -8,10 +8,15 @@ class WebViewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+<<<<<<< HEAD
       appBar: AppBar(),
       body: Container(
           //WebView(initialUrl: 'https://flutter.io'),
           ),
+=======
+      appBar: AppBar(), body: Container(),
+      // WebView(initialUrl: 'https://flutter.io'),
+>>>>>>> f0da7ddd458aa114e81e8c1664ec2443ca1a98be
     );
   }
 }

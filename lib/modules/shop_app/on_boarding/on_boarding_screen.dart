@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import 'dart:html';
 
+=======
+>>>>>>> f0da7ddd458aa114e81e8c1664ec2443ca1a98be
 import 'package:flutter/material.dart';
 
 class OnBoardingScreen extends StatelessWidget {
@@ -8,6 +11,7 @@ class OnBoardingScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('OnBoard'),
+<<<<<<< HEAD
         body: Padding(
           padding: const EdgeInsets.all(30.0),
           Column(
@@ -63,4 +67,9 @@ class OnBoardingScreen extends StatelessWidget {
             ),
           ],
         ),
+=======
+      ),
+    );
+  }
+>>>>>>> f0da7ddd458aa114e81e8c1664ec2443ca1a98be
 }
