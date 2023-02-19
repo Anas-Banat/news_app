@@ -3,9 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:sqflite/sqflite.dart';
-import 'package:todo_app/modules/archive_tasks/archive_tasks_screen.dart';
-import 'package:todo_app/modules/done_tasks/done_tasks_screen.dart';
-import 'package:todo_app/modules/new_tasks/new_tasks_screen.dart';
+import 'package:todo_app/modules/todo_app/archive_tasks/archive_tasks_screen.dart';
+import 'package:todo_app/modules/todo_app/done_tasks/done_tasks_screen.dart';
+import 'package:todo_app/modules/todo_app/new_tasks/new_tasks_screen.dart';
 import 'package:todo_app/shared/components/components.dart';
 import 'package:todo_app/shared/components/constants.dart';
 
