@@ -4,11 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:todo_app/layout/news_app/cubit/states.dart';
 import 'package:todo_app/modules/news_app/business/business_screen.dart';
 import 'package:todo_app/modules/news_app/science/science_screen.dart';
-<<<<<<< HEAD
 import 'package:todo_app/modules/settings_screen/settings_screen.dart';
-=======
-import 'package:todo_app/modules/shop_app/settings_screen/settings_screen.dart';
->>>>>>> f0da7ddd458aa114e81e8c1664ec2443ca1a98be
 import 'package:todo_app/modules/news_app/sports/sport_screen.dart';
 import 'package:todo_app/shared/network/local/cache_helper.dart';
 import 'package:todo_app/shared/network/remote/dio_helper.dart';
