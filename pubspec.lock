@@ -108,7 +108,7 @@ packages:
       url: "https://pub.dev"
 >>>>>>> f0da7ddd458aa114e81e8c1664ec2443ca1a98be
     source: hosted
-    version: "4.0.6"
+    version: "5.0.0"
   fake_async:
     dependency: transitive
     description:
