@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
           create: (context) => NewsCubit()
             ..changeAppMode(
               formShared: isDark,
-            ),
+           ),
         ),
       ],
       child: BlocConsumer<NewsCubit, NewsStates>(
