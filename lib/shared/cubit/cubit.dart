@@ -45,8 +45,7 @@ class AppCubit extends Cubit<AppStates> {
 
         print('database created');
         database
-            .execute(
-                'CREATE TABLE Tasks (id INTEGER PRIMARY KEY, title TEXT, date TEXT, time TEXT, status TEXT)')
+          .execute('CREATE TABLE Tasks (id INTEGER PRIMARY KEY, title TEXT, date TEXT, time TEXT, status TEXT)')
             .then((value) {
           print('Table Created');
         }).catchError((e) {
@@ -70,9 +69,7 @@ class AppCubit extends Cubit<AppStates> {
   }) async {
     await database.transaction((txn) async {
       txn
-          .rawInsert(
-        'INSERT INTO tasks (title, time, date, status) VALUES ("$title","$time","$date","new task")',
-      )
+          .rawInsert('INSERT INTO tasks (title, time, date, status) VALUES ("$title","$time","$date","new task")',)
           .then((value) {
         print('$value inserted successfully');
         emit(AppInsertDatabaseState());
@@ -112,10 +109,9 @@ class AppCubit extends Cubit<AppStates> {
     required String status,
     required int id,
   }) async {
-    database.rawUpdate(
-      'UPDATE tasks SET status = ? WHERE id = ?',
-      ['$status', '$id'],
-    ).then((value) {
+    database.rawUpdate('UPDATE tasks SET status = ? WHERE id = ?',
+      ['$status', '$id'],)
+        .then((value) {
       getDataFromDatabase(database);
       emit(AppUpdateDatabaseState());
     });
@@ -124,10 +120,9 @@ class AppCubit extends Cubit<AppStates> {
   void deleteData({
     required int id,
   }) async {
-    database.rawDelete(
-      'DELETE FROM tasks WHERE id = ?',
-      [id],
-    ).then((value) {
+    database.rawDelete('DELETE FROM tasks WHERE id = ?',
+      [id],)
+      .then((value) {
       getDataFromDatabase(database);
       emit(AppDeleteDatabaseState());
     });
